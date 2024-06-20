@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    background-color: lightblue;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+main {
+    width: 90%;
+    max-width: 800px;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 80px; /* Adjusted to avoid overlap with the fixed header */
+    overflow-y: auto;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.celcius-container, .fahrenheit-container, .conversion-container {
+    margin-bottom: 20px;
+}
+
+.celcius-container section, .fahrenheit-container section, .conversion-container section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+textarea {
+    resize: none;
+    background-color: #f8f8f8;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-family: math;
+    font-size: 14px;
+    flex: 1;
+    margin-right: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    min-width: 150px;
+}
+
+textarea#calculation-text {
+    flex: 2;
+}
+
+.button {
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    padding: 0 15px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.konversi {
+    background-color: rgb(0, 162, 255);
+    color: white;
+}
+
+.reset {
+    background-color: red;
+    color: white;
+}
+
+.reverse {
+    background-color: lightslategray;
+    color: white;
+}
+
+.spans {
+    font-size: 24px;
+    font-style: italic;
+    font-family: math;
+}
+
+@media (max-width: 600px) {
+    textarea, .button {
+        flex: 1;
+        margin-right: 5px;
+    }
+    textarea#calculation-text {
+        flex: 1;
+    }
+}
