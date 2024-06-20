@@ -17,7 +17,7 @@
         <section class="celcius-container">
             <h3>Celcius (&deg;C) :</h3>
             <section>
-                <textarea id="celsius"></textarea>
+                <textarea id="celsius" onkeypress="return isNumberKey(event)"></textarea>
                 <button class="konversi button" onclick="convertToFahrenheit()">Konversi ke Fahrenheit</button>
             </section>
         </section>
@@ -26,7 +26,7 @@
         <section class="fahrenheit-container">
             <h3>Fahrenheit (&deg;F) :</h3>
             <section>
-                <textarea id="fahrenheit"></textarea>
+                <textarea id="fahrenheit" onkeypress="return isNumberKey(event)"></textarea>
                 <button class="konversi button" onclick="convertToCelsius()">Konversi ke Celsius</button>
             </section>
         </section>
@@ -35,7 +35,7 @@
         <section class="conversion-container">
                 <h3>Conversion Calculate :</h3>
             <section>
-                <textarea id="calculation-text"></textarea>
+                <textarea id="calculation-text" readonly></textarea>
                 <button class="reset button" onclick="resetInput()">Reset</button>
                 <button class="reverse button" onclick="reverseConversion()">Reverse</button>
             </section>
